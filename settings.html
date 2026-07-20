@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>⚙ Settings</h1>
+        <p class="subtitle">Customize Aivora AI</p>
+    </header>
+
+    <label>🌙 Dark Mode</label>
+    <select id="theme">
+        <option>Dark</option>
+        <option>Light</option>
+    </select>
+
+    <label>🌍 Language</label>
+    <select id="language">
+        <option>English</option>
+        <option>العربية</option>
+    </select>
+
+    <label>🤖 AI Model</label>
+    <select id="model">
+        <option>Gemini 2.5 Flash</option>
+        <option>Gemini 2.5 Pro</option>
+    </select>
+
+    <button id="saveBtn">
+        💾 Save Settings
+    </button>
+
+    <button onclick="location.href='index.html'">
+        ⬅ Back
+    </button>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+</html>

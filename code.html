@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>💻 Code Assistant</h1>
+<p class="subtitle">Write, explain and improve code</p>
+</header>
+
+<select id="language">
+<option>Python</option>
+<option>JavaScript</option>
+<option>HTML</option>
+<option>CSS</option>
+<option>C++</option>
+<option>Java</option>
+<option>PHP</option>
+<option>Go</option>
+<option>Rust</option>
+</select>
+
+<textarea
+id="codeInput"
+placeholder="Paste or write your code here..."></textarea>
+
+<button id="analyzeBtn">
+🚀 Analyze Code
+</button>
+
+<textarea
+id="codeOutput"
+readonly
+placeholder="AI response will appear here..."></textarea>
+
+<button id="copyBtn">
+📋 Copy
+</button>
+
+<button onclick="location.href='index.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script src="code.js"></script>
+
+</body>
+</html>

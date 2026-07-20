@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🌍 Translator</h1>
+        <p class="subtitle">Translate any text</p>
+    </header>
+
+    <label>From</label>
+    <select id="fromLang">
+        <option value="auto">Auto Detect</option>
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+    </select>
+
+    <label>To</label>
+    <select id="toLang">
+        <option value="ar">Arabic</option>
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+    </select>
+
+    <textarea
+        id="inputText"
+        placeholder="Enter text...">
+    </textarea>
+
+    <button id="swapBtn">
+        🔄 Swap Languages
+    </button>
+
+    <button id="translateBtn">
+        🌍 Translate
+    </button>
+
+    <textarea
+        id="outputText"
+        placeholder="Translation..."
+        readonly>
+    </textarea>
+
+    <button id="copyBtn">
+        📋 Copy
+    </button>
+
+    <button onclick="window.location.href='index.html'">
+        ⬅ Back
+    </button>
+
+</div>
+
+<script src="translator.js"></script>
+
+</body>
+</html>
