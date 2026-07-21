@@ -31,7 +31,7 @@ async function sendMessage() {
 
     try {
 
-        const response = await fetch("http://172.20.1.199:5000/chat", {
+        const response = await fetch("https://novatoolsai.onrender.com/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41,17 +41,22 @@ async function sendMessage() {
             })
         });
 
-        console.log("Status:", response.status);
+        const result = await response.json();
 
-        const result = await response.text();
-        console.log("Response:", result);
+        messages.innerHTML += `
+            <div style="
+                background:#eeeeee;
+                color:#000;
+                padding:12px;
+                border-radius:10px;
+                margin-bottom:10px;">
+                ${result.reply}
+            </div>
+        `;
 
-        // أوقف التنفيذ هنا مؤقتًا للاختبار
-        return;
+        messages.scrollTop = messages.scrollHeight;
 
     } catch (error) {
-
-        console.log(error);
 
         messages.innerHTML += `
             <div style="
