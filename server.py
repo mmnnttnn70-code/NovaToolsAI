@@ -1,12 +1,13 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-# ضع مفتاح Gemini API هنا
-genai.configure(api_key="ضع مفتاح API هنا")
+# قراءة مفتاح Gemini API من Render Environment Variables
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # إنشاء نموذج Gemini
 model = genai.GenerativeModel("gemini-2.5-flash")
@@ -45,8 +46,9 @@ def chat():
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
     app.run(
         host="0.0.0.0",
-        port=5000,
-        debug=True
+        port=port,
+        debug=False
     )
