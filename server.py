@@ -9,7 +9,7 @@ CORS(app)
 # قراءة مفتاح Gemini API من Render Environment Variables
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
-model = genai.GenerativeModel("gemini-2.5-flash-lite")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 
 @app.route("/")
